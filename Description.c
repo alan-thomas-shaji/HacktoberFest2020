@@ -13,5 +13,5 @@ void main()
   printf("WELCOME TO HACKTOBERFEST 2020!!!!!");
   printf("So let's get started!");
   printf("I guess everybody is a noobie here");
-
+  printf("My whole life was a bruh moment");
 }

@@ -3,7 +3,7 @@
 
 void main()
 {
-    printf("WELCOME TO HACKTOBERFEST 2020!!!!!");
+    printf("WELCOME TO HACKTOBERFEST 2020!!!!!!");
 
 #include<graphic.h>
 #include<conio.h>

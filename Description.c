@@ -1,10 +1,4 @@
 #include<stdio.h>
-
-
-void main()
-{
-    printf("WELCOME TO HACKTOBERFEST 2020!!!!!!");
-
 #include<graphic.h>
 #include<conio.h>
 void main()
@@ -15,4 +9,5 @@ void main()
   printf("I guess everybody is a noobie here");
   printf("But no noobie becomes an expert without \"Hello World!\" ");
   printf("My whole life was a bruh moment");
+  printf("But with a little sunshine, we made it through");
 }

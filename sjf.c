@@ -1,4 +1,4 @@
-/* Program to implement SJF scheduling */
+/* Program to implement Shortest Job First (SJF) scheduling */
 
 #include <stdio.h>
 

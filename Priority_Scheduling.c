@@ -41,35 +41,7 @@ void main()
             }
         }
     }
-    wt[0]=0;
-    for(i=1;i<number;i++){
-        wt[i]=0;
-        for(j=0;j<i;j++){
-            wt[i]+=burst_array[j];
-        }
-        sum1+=wt[i];
-    }
-    
-    for(i=0;i<number;i++){
-        tat[i]=0;
-        for(j=0;j<=i;j++){
-            tat[i]+=burst_array[j];
-        }
-        sum2+=tat[i];
-    
-    }
-    printf("\n\n ----------------------------------------------------------------------------------------------------------\n");
-    printf("\n  Process\t Priority\t Burst Time\t Waiting Time\t Turn-around Time" );
-    for(i=0;i<number;i++)
-    {
-    printf("\n   P%d\t\t   %d\t\t  %d\t\t\t  %d\t\t\t%d",pid[i],priority[i],burst_array[i],wt[i],tat[i]);
-    }
- 
-    printf("\n\n  AVERAGE WAITING TIME : %f",sum1/number);
-    printf("\n  AVERAGE TURN AROUND TIME : %f",sum2/number);
-    printf("\n\n ----------------------------------------------------------------------------------------------------------\n");
-        
-    
+
     
    
 }

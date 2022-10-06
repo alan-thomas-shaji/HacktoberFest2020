@@ -1,5 +1,6 @@
-# HacktoberFest2020
+# HacktoberFest2022
 Repo for this year's hacktober fest. FEEL FREE TO PR
+It's 2022 bitches!!!!!!!
 
 `and win amazing swags`
 

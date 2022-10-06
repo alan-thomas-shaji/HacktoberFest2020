@@ -6,41 +6,7 @@
 const int disk_size = 199;					// last cylinder of disk
 int head;
 
-void sort(int seq[],int size)
-{	
-	int temp;
-	for(int i=0;i<size;i++)
-	{
-		for(int j=0;j<size-i;j++)
-		{
-			if(seq[j] > seq[j+1])
-			{
-				temp = seq[j];
-				seq[j] = seq[j+1];
-				seq[j+1] = temp;
-			}
-		}
-	}
-}
 
-
-void resulttime(int n,int request_sequence[])
-{
-	int distance,seek_count = 0,x = -1,y = -1;
-	int hl[n],hr[n];
-
-	for(int i=0;i<n;i++)
-	{
-		if(request_sequence[i] <= head)
-		{
-			hl[++x] = request_sequence[i];
-		}
-		else
-		{
-			hr[++y] = request_sequence[i];
-		}
-	}
-	
 
 	sort(hl,x);
 	sort(hr,y);

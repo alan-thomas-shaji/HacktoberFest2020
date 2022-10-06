@@ -1,0 +1,99 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+
+void one(void);
+void two(void);
+
+const int pnum = 5; 
+int pid[5], status[5], hungnum, hpos[5], choice;
+
+void main ()
+{
+    printf("Dining Philosophers Problem);
+    
+    int i;
+    printf("\n\nConsidering 5 philosophers.");
+    for (i = 0; i < pnum; i++)
+    {
+        pid[i] = (i + 1);
+        status[i] = 1;
+    }
+    printf ("\nEnter the number of philosophers that are hungry : ");
+    scanf ("%d", &hungnum);
+    if (hungnum == pnum)
+    {
+        printf ("\nAll are hungry... \n\nDeadlock");
+        printf ("\n\nTerminating... \n ");
+    }
+   else
+    {
+		for (i = 0; i < hungnum; i++)
+	  	{
+	    	printf ("Enter the position of philosopher %d :", (i + 1));
+	    	scanf ("%d",&hpos[i]);
+	    	status[hpos[i]-1] = 2;
+	  	}
+	do
+	  {
+	      printf("\n\nCombinations:\n");
+	      printf("\n\n1.One can eat at a time\n2.Two can eat at a time\n3.Exit\n\nSelect the combination::");
+	      scanf("%d", &choice);
+	      switch (choice)
+	      {
+	          case 1: one();
+	                  printf("\n\nDo you want any other combinations?");
+	                  break;
+	          case 2: two();
+	                  printf("\n\nDo you want other combinations?");
+		              break;
+		      case 3: exit (0);
+	          default:printf ("\nInvalid option..");
+	      }
+	  }
+	while (1);
+    }
+    }
+    
+    
+void one()
+  {
+    int pos = 0, x, i;
+    printf ("\nAllowing one philosopher to eat at a time...\n");
+    for (i = 0; i < hungnum; i++, pos++)
+    {
+		printf ("\nP %d is granted to eat", pid[hpos[pos] - 1]);
+		for (x = 0; x < hungnum; x++)
+	  	{	
+	  		if(x!=i)
+	  			printf ("\nP %d is waiting", pid[hpos[x] - 1]);
+	  	}	
+    }
+  }
+ 
+ 
+void two()
+{  
+    int i, j, s = 0, t, r, x;
+    printf ("\nAllowing two philosophers to eat at same time...\n");
+    for (i = 0; i < hungnum; i++)
+      {
+	for (j = i + 1; j < hungnum; j++)
+	  {
+	    if (abs(hpos[i] - hpos[j]) > 1 && abs(hpos[i] - hpos[j]) != 4)
+	      {
+		
+		t = hpos[i];
+		r = hpos[j];
+		s++;
+		printf ("\nP %d and P %d are granted to eat", pid[hpos[i] - 1],
+			pid[hpos[j] - 1]);
+		for (x = 0; x < hungnum; x++)
+		  {
+		    if ((hpos[x] != t) && (hpos[x] != r))
+		      printf ("\nP %d is waiting", pid[hpos[x] - 1]);
+		  }
+	      }
+	  }
+      }
+  }

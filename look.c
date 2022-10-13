@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 int main(){
     int RQ[100], i, j, n, TotalHeadMoment = 0, initial, size, move;
     printf("Enter the number of Requests\n");
@@ -40,7 +41,7 @@ int main(){
             initial = RQ[i];
         }
     }
-    else{
+    else {
         for (i = index - 1; i >= 0; i--){
             TotalHeadMoment = TotalHeadMoment + abs(RQ[i] - initial);
             initial = RQ[i];

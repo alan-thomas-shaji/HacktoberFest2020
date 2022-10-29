@@ -90,8 +90,7 @@ void resulttime(int process[],int n,int process_burst[],int process_arrival[])
 
  /* Driver Code */
 
-void main()
-{
+void main() {
 	int n;
 	printf("\nEnter number of processes:");
 	scanf("%d",&n);

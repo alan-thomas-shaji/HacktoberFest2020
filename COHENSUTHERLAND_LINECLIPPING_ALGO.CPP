@@ -4,6 +4,7 @@
 #include<graphics.h>
 #include<process.h>
 #include<dos.h>
+
 void main()
 {
 	int gd=DETECT,gm;
@@ -144,11 +145,3 @@ void main()
 	closegraph();
 	getch();
 }
-
-
-
-
-
-
-
-

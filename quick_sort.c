@@ -21,6 +21,7 @@ int main(){
 	
 	return EXIT_SUCCESS;
 }
+
 int partition(TYPE A[], int p, int r) {
 	TYPE x = A[r]; //pivot
 	int i = p - 1, j;
@@ -34,6 +35,7 @@ int partition(TYPE A[], int p, int r) {
 	swap(TYPE, A[i], A[r]);
 	return i;
 }
+
 void quick_sort(TYPE A[], int p, int r) {
 	if(p < r) {
 		int t = (rand() % ( r - p + 1) + p);
@@ -45,6 +47,7 @@ void quick_sort(TYPE A[], int p, int r) {
 		quick_sort(A, q + 1, r);
 	}
 }
+
 void print_array(TYPE A[], int n) {
 	int i = 0;
 	putchar('[');

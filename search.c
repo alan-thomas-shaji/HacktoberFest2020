@@ -1,6 +1,6 @@
 #include <stdio.h> 
-int binarySearch(int ar[], int l, int r, int x) 
-{ 
+
+int binarySearch(int ar[], int l, int r, int x) { 
     if (r >= l) { 
         int mid = l + (r - l) / 2; 
         if (ar[mid] == x) 
@@ -12,8 +12,7 @@ int binarySearch(int ar[], int l, int r, int x)
     return -1; 
 } 
   
-int main(void) 
-{ 
+int main(void) { 
     int ar[] = { 2, 3, 4, 10, 40 }; 
     int n = sizeof(ar) / sizeof(ar[0]); 
     int x = 10; 
